@@ -26,5 +26,8 @@ router.get('/myProfile', function(req, res) {
 router.get('/register', function(req, res) {
     res.render('register');
 });
+router.get('/createJob', function(req, res) {
+    res.render('createJob');
+});
 
 module.exports = router;
