@@ -9,7 +9,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.14.2",
+    "cookie-parser": "^1.4.0",
     "ejs": "^2.3.4",
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "express-session": "^1.12.1",
+    "mysql": "^2.10.0",
+    "node_hash": "^0.2.0"
   }
 }

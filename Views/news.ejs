@@ -2,6 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="/css/layout.css" />
+    <meta charset="utf-8">
 </head>
 <body>
 <div class="header">
@@ -9,14 +10,8 @@
         <a href="/"><img src="css/img/logo.png" height /></a>
     </span>
     <a href="/myProfile">my profile</a>
-    <div class="headerLogin"/>
-    <form action="" method="post">
-        <input type="text" name="username" placeholder="Username" required><br>
-        <input type="password" name="password" placeholder="Password" required>
-        <input type="submit" value="Log in"><br>
-        <a href="/register">register</a>
-    </form>
-</div>
+    <a href="/createJob"> create Job</a>
+    welkom:<b><%=username%></b>
 </div>
 <div class="sidebar">
     <a href="/news">News</a><br><br>

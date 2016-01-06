@@ -3,12 +3,22 @@
  */
 //modules
 var express = require('express');
+var bodyParser = require('body-parser');
+var cookieParser=require('cookie-parser');
+var session = require('express-session');
 
 //express
 var app = express();
 
 //middleware
 app.set('view engine', 'ejs');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(session({
+    secret:'secret',
+    resave: false,
+    saveUninitialized: false
+}));
 
 //routes
 app.use(require("./controller/router"));
