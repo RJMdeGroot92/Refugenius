@@ -1,7 +1,7 @@
 {
   "name": "refugenius",
   "version": "1.0.0",
-  "description": "website start",
+  "description": "website start 2",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

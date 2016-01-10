@@ -50,6 +50,7 @@ input[type="text"], input[type="password"], input[type='textArea']{
 }
 input[type='textArea']{
     height: 300px;
+    
 }
 
 input[type="submit"]{
