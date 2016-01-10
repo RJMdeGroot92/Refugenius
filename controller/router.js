@@ -14,9 +14,14 @@ router.get('/', function(req, res) {
 
 });
 router.get('/news', function(req, res) {
-    res.render('news',{
-    username:req.session.username
-});
+    if(req.session.username!=null){
+        res.render('news',{
+            username:req.session.username
+    });
+    }
+    else{
+           return res.redirect('/');
+        }
 });
 router.get('/available', function(req, res) {
     res.render('available');
@@ -28,7 +33,22 @@ router.get('/jobs', function(req, res) {
     res.render('jobs');
 });
 router.get('/myProfile', function(req, res) {
-    res.render('myProfile');
+    console.log(req.session.username)
+    if(req.session.username!=null){
+        sql.profileQuery(req.session.username, function(result){
+            res.render('myProfile',{
+                username:result[0].Username,
+                firstName:result[0].First_namem,
+                lastName:result[0].Last_name,
+                dateOfBirth:result[0].Date_of_birth.toLocaleString()
+            });
+
+        });
+
+    }
+    else{
+        return res.redirect('/');
+    }
 });
 router.get('/register', function(req, res) {
     res.render('register');

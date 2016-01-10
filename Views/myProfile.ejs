@@ -9,15 +9,8 @@
     <span id="logo">
         <a href="/"><img src="css/img/logo.png" height /></a>
     </span>
-    <a href="/myProfile">my profile</a>
-    <div class="headerLogin">
-    <form action="" method="post">
-        <input type="text" name="username" placeholder="Username" required><br>
-        <input type="password" name="password" placeholder="Password" required>
-        <input type="submit" value="Log in"><br>
-        <a href="/register">register</a>
-    </form>
-</div>
+    <a href="/news">home</a>
+    <a href="/createJob"> create Job</a>
 </div>
 <div class="sidebar">
     <a href="/news">News</a><br><br>
@@ -28,8 +21,10 @@
     <a href="/jobsinarea">search for jobs in your area</a>
 </div>
 <div class="main">
-    Welkom op de website van refugenius. we zijn bla bla blablablablablablablablablablablablablablablablablablablablablabla blablablablablablablabla blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla
-
+    Username:<b><%=username%></b><br>
+    Firstname:<b><%=firstName%></b><br>
+    Lastname:<b><%=lastName%></b><br>
+    Date of birth:<b><%=dateOfBirth%></b><br>
 </div>
 </body>
 </html>
