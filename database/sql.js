@@ -48,7 +48,7 @@ var profileQuery = function(input, callback){
     });
 };
 
-var jobsQuery=function(input, callback){
+var jobsQuery=function(callback){
     pool.getConnection(function(err, connection){
         if(!err)
             var sql = 'SELECT * FROM `Jobs`';
@@ -63,7 +63,8 @@ var jobsQuery=function(input, callback){
 }
     return{
         loginQuery:loginQuery,
-        profileQuery: profileQuery
+        profileQuery: profileQuery,
+        jobsQuery:jobsQuery
 
     };
 }();

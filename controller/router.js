@@ -24,7 +24,11 @@ router.get('/news', function(req, res) {
         }
 });
 router.get('/available', function(req, res) {
-    res.render('available');
+    sql.jobsQuery(function(result){
+    res.render('available',{
+        availableJobs: result
+        });
+    });
 });
 router.get('/jobsinarea', function(req, res) {
     res.render('jobsinarea');
