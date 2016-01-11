@@ -86,3 +86,19 @@ a{
 a:hover{
     text-decoration: underline;
 }
+
+table {
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 300;
+    padding-bottom: 1em;
+    width: 100%;
+    border: 1px solid dimgrey
+}
+table, thead, th {
+    font-weight: 400;
+    border-bottom: 1px solid #eee;
+}
+table, th, td {
+    padding: 3px 0;
+}

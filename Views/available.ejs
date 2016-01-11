@@ -20,8 +20,24 @@
 </div>
 <div class="main">
     <div class="jobs">
+        <table id="jobsTable" class="display">
+        <thead>
+        <th>name</th>
+        <th>description</th>
+        <th>price</th>
+        <th>difficulty rating</th>
+        </thead>
+        <tbody>
         <% for(var i=0; i<availableJobs.length;i++){%>
+            <tr>
+            <td><%=availableJobs[i].Title%></td>
+            <td><%=availableJobs[i].Description%></td>
+            <td><%=availableJobs[i].Price%></td>
+            <td><%=availableJobs[i].Difficulty%></td>
+            </tr>
         <%}%>
+        </tbody>
+        </table>
     </div>
 </div>
 </body>
