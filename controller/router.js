@@ -65,8 +65,6 @@ router.get('/createJob', function(req, res) {
 router.post('/', function(req, res){
     var user = req.body.username;
     var hashedPassword = hash.sha256(req.body.password);
-    //console.log(hashedPassword);
-    //console.log(user.toString()+"+"+hashedPassword.toString());
     sql.loginQuery(user, function(result){
         if(result.length>0 && hashedPassword == result[0].Password){
             req.session.username=user;
