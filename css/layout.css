@@ -3,6 +3,7 @@
     position:absolute;
     left:0; right:0;
     height: 150px;
+
 }
 .sidebar {
     position:absolute;
@@ -101,4 +102,14 @@ table, thead, th {
 }
 table, th, td {
     padding: 3px 0;
+    border: 1px solid dimgrey
+
+}
+
+#headerLinks{
+    width:30%;
+    float:right;
+    font-size: 20px;
+    line-height:100px;
+    text-align: end;
 }

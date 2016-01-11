@@ -27,7 +27,6 @@ var loginQuery = function(input,callback) {
         connection.query(sql, function (err, rows) {
             if (!err)
                 connection.release();
-            console.log(rows);
             callback(rows);
         });
     });
@@ -42,7 +41,6 @@ var profileQuery = function(input, callback){
         connection.query(sql, function (err, rows) {
             if (!err)
                 connection.release();
-            console.log(rows);
             callback(rows);
         });
     });
@@ -56,7 +54,6 @@ var jobsQuery=function(callback){
         connection.query(sql, function (err, rows) {
             if (!err)
                 connection.release();
-            console.log(rows);
             callback(rows);
         });
     })

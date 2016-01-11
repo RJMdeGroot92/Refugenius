@@ -33,16 +33,14 @@ router.get('/available', function(req, res) {
 router.get('/jobsinarea', function(req, res) {
     res.render('jobsinarea');
 });
-router.get('/jobs', function(req, res) {
-    res.render('jobs');
-});
+
 router.get('/myProfile', function(req, res) {
     console.log(req.session.username)
     if(req.session.username!=null){
         sql.profileQuery(req.session.username, function(result){
             res.render('myProfile',{
                 username:result[0].Username,
-                firstName:result[0].First_namem,
+                firstName:result[0].First_name,
                 lastName:result[0].Last_name,
                 dateOfBirth:result[0].Date_of_birth.toLocaleString()
             });
@@ -82,6 +80,9 @@ router.post('/', function(req, res){
         };
 
     });
+});
+router.post('/register', function(req,res){
+
 });
 
 module.exports = router;
